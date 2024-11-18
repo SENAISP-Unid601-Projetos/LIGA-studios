@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323";
+}
+
+body, html{
+    background-image: url('../IMG/fundoCreditos.png');
+    background-repeat: no-repeat; /* evita a repetição da imagem */
+    background-position: center; /* centraliza a imagem no elemento */
+    background-size: cover; /* ajusta a imagem para cobrir toda a área */
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+header{
+    background-color: #6a040f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+}
+
+.logo{
+    position: absolute;
+    margin-left: 670px;
+    margin-top: 270px;
+    width: 12rem;
+    height: auto;
+}
+
+#tituloCabecalho{
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-left: 2rem;
+}
+
+img{
+    width: 12rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.retornar {
+    background-color: #838383;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    width: 230px;
+    border-color: transparent;
+    margin-left: 645px;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+#div_andre, #div_gabriel, #div_isabela, #div_laura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    background-color: #6a040f;
+    padding: 1.5rem;
+    border-radius: 0.5cm;
+    margin-bottom: 1.5rem;
+    width: 30rem;
+    height: 19rem;
+}
+
+#equipe{
+    display: flex;
+    flex-direction: column;
+}
+
+#alto, #baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nome{
+    color: #ffba08;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+
+.funcao{
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 0rem;
+}
+
+.linkLinkedin {
+    color: white;
+    background-color: #838383;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 1.2rem;
+    transition: 150ms ease;
+    font-size: 1.4rem;
+    line-height: 15px;
+    height: 1.6rem;
+    text-align: center;
+    position: relative; /* Adicionado para que o ::after posicione-se em relação ao link */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+/* Estilo padrão para a linha em estado normal (invisível) */
+.linkLinkedin::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Ajuste para que a linha fique logo abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px; /* Altura da linha */
+    background-color: #ffba08; /* Cor da linha */
+    border-radius: 2px; /* Arredondamento da linha */
+    transition: width 0.3s ease;
+}
+
+.linkLinkedin:hover{
+    color: #ffba08;
+}
+
+/* Efeito de hover: expande a linha */
+.linkLinkedin:hover::after {
+    width: 100%; /* Expande a linha na largura do link */
+}
+
+#rodape{
+    background-color: #6a040f;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyRight{
+    color: white;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    /* margin-top: 20px; */
+    text-align: center;
+}
+
+#voltarAoInicio{
+    color: white;
+    
+    margin-left: 1.5rem;
+    font-size: 2rem;
+    transition: 150ms ease;
+    display: inline;
+}
+
+#voltarAoInicio:hover{
+    color: #ffba08;
+}
+
+.retornar:hover{
+    scale: 1.1;
+}
+
+/* Media Queries para responsividade */
+
+/* Telas menores que 900px (tablets e celulares) */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #tituloInicial {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    #baixo, #alto{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #equipe{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #div_daniel, #div_julia, #div_luana, #div_marilia, #div_emily, #div_victoria{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        background-color: #4E148C;
+        padding: 1rem;
+        border-radius: 0.5cm;
+        margin-bottom: 2rem;
+        width: 20rem;
+        height: 40rem;
+        text-align: center;
+    }
+
+    img{
+        border-radius: 0.5cm;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #rodape{
+        height: 10rem;
+    }
+
+    #voltarAoInicio{
+        font-size: 1.5rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    #voltarAoInicio:hover{
+        font-size: 1.5rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    #voltarAoInicio:active{
+        font-size: 1.8rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    .linkLinkedin{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #4E148C;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .linkLinkedin:hover{
+        color: #4E148C;
+    }
+
+    .nome{
+        font-size: 1.3rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #tituloInicial {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    #baixo, #alto{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #equipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #div_daniel, #div_julia, #div_luana, #div_marilia, #div_emily, #div_victoria{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        background-color: #4E148C;
+        padding: 1rem;
+        border-radius: 0.5cm;
+        margin-bottom: 2rem;
+        width: 22rem;
+    }
+
+    img{
+        border-radius: 0.5cm;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkLinkedin{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: #4E148C;
+        font-weight: 600;
+    }
+
+    .linkLinkedin:hover{
+        color: #4E148C;
+    }
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    #tituloInicial {
+        font-size: 1.8rem;
+    }
+
+    #voltarAoInicio{
+        font-size: 1rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    #voltarAoInicio:hover{
+        font-size: 1rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    #voltarAoInicio:active{
+        font-size: 1.3rem;
+        font-weight: 800;
+        background-color: white;
+        color:#4E148C;
+        padding: 1rem;
+        border-radius: 1cm;
+    }
+
+    #copyRight{
+        font-size: 1rem;
+    }
+}

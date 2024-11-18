@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-image: url('fundoFases.png'); 
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+}
+
+.container {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;   /* Coloca os botões em coluna (um abaixo do outro) */
+    align-items: center;      /* Centraliza os botões horizontalmente */
+    /* border: 2px solid white; */
+    width: 1520px;
+    height: 100px;
+}
+
+button {
+    font-family: "VT323", monospace;    
+}
+
+.botao {
+    /* position: absolute; */
+    width: 150px;
+    padding: 10px;
+    margin-right: -20px;
+    margin-top: 480px;          /* Adiciona espaçamento entre os botões */
+    font-size: 16px;
+    background-color: transparent; /* Exemplo de cor de fundo para o botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 40px;}
+
+.botao2 {
+    /* position: absolute; */
+    width: 150px;
+    padding: 10px;
+    margin: 80px 0; 
+    margin-right: -20px;
+    margin-bottom: 100px;
+    /* Adiciona espaçamento entre os botões */
+    font-size: 16px;
+    background-color: transparent; /* Exemplo de cor de fundo para o botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.botao:hover {
+    background-color: #838383; /* Cor do botão ao passar o mouse */
+}
+
+.botao2:hover {
+    background-color: #838383; /* Cor do botão ao passar o mouse */
+}
+
+
+
+
+
+#botaoDerrota:hover {
+    scale: 1.05;
+    background-color: #b9090f;
+
+}
+
+#botaoSair:hover {
+    scale: 1.05;
+    background-color: #b9090f;
+}
+
+#botaoSairVitoria:hover {
+    scale: 1.05;
+    background-color: #1d26c5;
+}
+
+#botaoVitoria:hover {
+    scale: 1.05;
+    background-color: #1d26c5;
+}
+
+#botaoDerrota{
+    width: 295PX;
+    height: 75px;
+    border-radius: 10px;
+    margin-top: 565px;
+    margin-left: 630px;
+    border-color: #9b452d;
+    background-color: #c1272d;
+    color: white;
+    position: fixed;
+    display: none;
+    font-family: "VT323", monospace;
+    font-size: 40px;  
+}
+
+#botaoSair{
+    width: 119px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 645px;
+    margin-left: 1360px;
+    border-color: #9b452d;
+    background-color: #c1272d;
+    color: white;
+    position: fixed;
+    display: none;
+    font-family: "VT323", monospace;
+    font-size: 40px;  
+}
+
+#botaoSairVitoria{
+    width: 119px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 650px;
+    margin-left: 1370px;
+    border-color: #0800ff;
+    background-color: #272fc1;
+    color: white;
+    position: fixed;
+    display: none;
+    font-family: "VT323", monospace;
+    font-size: 40px;  
+}
+
+#botaoVitoria{
+    width: 300px;
+    height: 75px;
+    border-radius: 10px;
+    margin-top: 540px;
+    margin-left: 615px;
+    border-color: #1100fa;
+    background-color: #272fc1;
+    color: white;
+    position: fixed;
+    display: none;
+    font-family: "VT323", monospace;
+    font-size: 40px;  
+}
+
+
+
+.mainCanvas {    
+    background-image: url('fundo.png');
+    background-size: 1500px; /* Ajusta o tamanho da imagem */
+    background-position: bottom; 
+    background-color: #d9eaff; /* Cor de fundo caso a imagem não carregue */
+    display: block;    
+    /* margin: 0 auto; */
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+h2 {
+    color: white;
+}
+
+body {
+    font-family: "VT323", monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 3px solid rgb(0, 34, 255); */
+   
+}
+
+header {
+    background-color: rgb(3, 87, 129);
+    padding: 10px 0;
+    text-align: center;
+        font-family: "VT323", monospace;
+
+    font-size:20px;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    width: 100%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+/*----------------------------------------------------------------------------------------*/
+
+/* CONFIGURAÇÃO HAMBURGUER, MENU, HEADER*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+  }
+  
+  .navbar h1 {
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(51, 51, 51); /* Fundo mais sólido e opaco */
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-100%); /* Esconder o menu fora da tela */
+      z-index: 1;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0); /* Mostrar o menu quando ativo */
+    }
+  
+    .nav-links li {
+      margin: 20px 0; /* Ajustar espaçamento vertical */
+    }
+  
+    .hamburger {
+      display: flex; /* Mostrar botão de hambúrguer em telas pequenas */
+    }
+  }
+  
+@media (min-width: 769px) {
+    .navbar {
+      justify-content: center; /* Centraliza o conteúdo no modo desktop */
+    }
+  
+    .nav-links {
+      justify-content: center;
+      margin-right: 50px;/* Centraliza os links dentro do menu no desktop */
+    }
+  
+    .nav-links li {
+      margin-left:80px; /* Adiciona espaço entre os links */
+    }
+  
+    .hamburger {
+      display: none; /* Esconde o ícone de hambúrguer no desktop */
+    }    
+  }
+  header, .navbar, .nav-links {
+    z-index: 1000;
+  }
+/*----------------------------------------------------------------------------------------*/
+
+/* TITULOS */
+.tituloSobreNos h1 {
+    font-size: 50px;
+    color: rgb(251,203,56);
+    font-family: "VT323", monospace;
+    margin-top: 100px;
+}
+
+.titulo-oJogo h1 {
+    font-size: 50px;
+    color: rgb(251,203,56);
+    font-family: "VT323", monospace;
+}
+
+.tituloControles h1 {
+    font-size: 50px;
+    color: rgb(251,203,56);
+    padding: 15px;
+    font-family: "VT323", monospace;
+}
+
+.tituloContato h1 {
+    font-size: 50px;
+    color: rgb(251,203,56);
+    font-family: "VT323", monospace;
+    border-bottom:100px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+
+/* IMAGENS*/
+.logoLIGA {
+    width:140px;
+    height: 140px;
+}
+
+.divLogoLIGA {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Tamanho máximo da imagem no desktop */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para telas menores que 768px (celulares e tablets) */
+  @media (max-width: 768px) {
+    img {
+      width: 80%; /* Tamanho da imagem em telas menores */
+      max-width: none; /* Remove o limite máximo de tamanho */
+    }
+
+
+  }
+  
+  /* Estilo para telas menores que 480px (celulares pequenos) */
+  @media (max-width: 480px) {
+    img {
+      width: 90%; /* Tamanho maior para celulares pequenos */
+    }
+  }
+
+
+.logo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* border: 2px solid white; */
+    width:30%;
+    height: auto;
+}
+
+.botaoJogar {
+    color: #2096f2;
+    text-decoration: none;
+    background-color: #ffc20d;
+    padding: 10px;
+    border-radius: 12px;
+    margin-left: 110px;
+    text-shadow: none;
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+/* TEXTOS*/
+.textoSobreNos p {
+    padding: 30px;
+    height: 340px;
+    color: white;
+    font-size: 25px;
+        font-family: "VT323", monospace;
+
+    line-height: 1.7; 
+}
+
+.texto-oJogo p {
+    padding: 38px;
+    height: 340px;
+    color: white;
+    font-size: 25px;
+        font-family: "VT323", monospace;
+
+    line-height: 1.7;
+}
+
+.texto-oJogo pre {
+    /* padding: 30px; */
+    height: 340px;
+    color: white;
+        font-family: "VT323", monospace;
+
+    font-size: 300px;
+    line-height: 1.7;
+}
+
+.texto-oJogo p {
+    font-size:32px;
+}
+
+.textoPersonagens p {
+    padding: 30px;
+    height: 340px;
+    color: white;
+        font-family: "VT323", monospace;
+
+    font-size: 25px;
+    line-height: 1.7;
+}
+
+.textoControles p {
+    padding: 30px;
+    height: 340px;
+        font-family: "VT323", monospace;
+
+    color: white;
+    font-size: 25px;
+    line-height: 1.7;
+}
+
+.textoContato p {
+    padding: 15px;
+    color: rgb(251,203,56);
+    font-size: 40px;
+        font-family: "VT323", monospace;
+
+    line-height: 1.7;
+}
+
+.textoContato h2 {
+    font-size: 40px;
+}
+
+.textoContato a, b {
+    font-size: 30px;
+}
+/*----------------------------------------------------------------------------------------*/
+
+/* CONTAINERES*/
+.home-container {
+    position: relative;
+    width: 290%; /* Ocupa toda a largura disponível */
+    height: 655px; /* Altura da área */
+    background-image: url('../IMG/oi.png'); /* Definindo a imagem como fundo */
+    background-size: 1710px; /* Garante que a imagem preencha todo o container */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.9; /* Diminui a opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-SobreNos {
+    position: center;
+    width: 80%;
+    height: 1500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 290%; /* Ocupa toda a largura disponível */
+    height: 1000px; /* Altura da área */
+    background-image: url('../IMG/oi.png'); /* Definindo a imagem como fundo */
+    background-size: 1710px; /* Garante que a imagem preencha todo o container */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.9; /* Diminui a opacidade */
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    /*     font-family: "VT323", monospace;
+ */
+}
+
+.container-oJogo {
+    position: relative;
+    width: 80%;
+    height: 1300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 290%; /* Ocupa toda a largura disponível */
+    height: 1300px; /* Altura da área */
+    background-image: url('../IMG/oi.png'); /* Definindo a imagem como fundo */
+    background-size: 2210px; /* Garante que a imagem preencha todo o container */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.9; /* Diminui a opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerControles {
+    position: relative;
+    width: 80%;
+    height: 1000px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 290%; /* Ocupa toda a largura disponível */
+    height: 1150px; /* Altura da área */
+    background-image: url('../IMG/oi.png'); /* Definindo a imagem como fundo */
+    background-size: 2210px; /* Garante que a imagem preencha todo o container */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.9; /* Diminui a opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*     font-family: "VT323", monospace;
+ */
+}
+
+.containerContato {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 290%; /* Ocupa toda a largura disponível */
+    height: 700px; /* Altura da área */
+    background-image: url('../IMG/oi.png'); /* Definindo a imagem como fundo */
+    background-size: 1710px; /* Garante que a imagem preencha todo o container */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0.9; /* Diminui a opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*     font-family: "VT323", monospace;
+ */
+}
+
+.containerContato h2 {
+        font-family: "VT323", monospace;
+
+}
+
+.containerContato a {
+    font-size:20px;
+        font-family: "VT323", monospace;
+
+}
+/*----------------------------------------------------------------------------------------*/
+
+
+.cadaTecla {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        font-family: "VT323", monospace;
+
+    width: 300px;
+}
+
+.cadaTecla h1 {
+    color:white;
+    margin-left: 10px;
+}
+
+.txtEimg-oJogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-oJogo {
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    margin-top: -50px;
+}
+
+.imagens-oJogo {
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgFases {
+    width: 390px;
+    height: 550px;
+    filter : saturate(2)
+}
+
+.joe {
+    width: 175px;
+    height: 430px;
+}
+
+.imagensControles {
+    display: flex;
+    flex-direction: column;
+}
+
+.configIMGScontroles {
+    height: 170px;
+}
+
+.configTeclaEspaco {
+    /* border: 2px solid red; */
+    width: 200px;
+}
+
+.h1TeclaEspaco h1 {
+    padding: 10px;
+}
+
+.botaoJogar:hover{
+    background-color: rgb(255, 115, 0);
+    scale: 1.05;
+}
+
+
+/* AJUSTES DE RESPONSIVIDADE*/
+@media (max-width: 843px) {
+    
+    .logo{
+        width: 100%;
+    }
+
+    .botaoJogar {
+        margin-left: 80px;
+    }
+    
+    .container-SobreNos {
+        position: center;
+        width: 80%;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 190%; /* Ocupa toda a largura disponível */
+        height: 1400px; /* Altura da área */
+        background-image: url('../IMG/fogo-fundo.jpg'); /* Definindo a imagem como fundo */
+        background-size: 1500px; /* Garante que a imagem preencha todo o container */
+        background-position: center; /* Centraliza a imagem */
+        opacity: 0.9; /* Diminui a opacidade */
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        /*     font-family: "VT323", monospace;
+ */
+
+    }
+
+    .home-container {
+        position: center;
+        width: 80%;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 190%; /* Ocupa toda a largura disponível */
+        height: 1400px; /* Altura da área */
+        background-image: url('../IMG/fogo-fundo.jpg'); /* Definindo a imagem como fundo */
+        background-size: 1500px; /* Garante que a imagem preencha todo o container */
+        background-position: center; /* Centraliza a imagem */
+        opacity: 0.9; /* Diminui a opacidade */
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        /*     font-family: "VT323", monospace;
+ */
+
+    }
+
+    .tituloSobreNos {
+        margin-top:50px;
+    }
+
+    .texto-oJogo p {
+        font-size: 22px;
+    }
+
+    .texto-oJogo {
+    border: 2px solid blue;    }
+
+    .textoControles p {
+        font-size: 22px;
+    }
+
+    .textoContato p {
+        font-size: 22px;
+    }
+
+    .container-oJogo {
+        position: center;
+        width: 80%;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 290%; /* Ocupa toda a largura disponível */
+        height: 1200px; /* Altura da área */
+        background-image: url('../IMG/fogo-fundo.jpg'); /* Definindo a imagem como fundo */
+        background-size: 1500px; /* Garante que a imagem preencha todo o container */
+        background-position: center; /* Centraliza a imagem */
+        opacity: 0.9; /* Diminui a opacidade */
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        /*     font-family: "VT323", monospace;
+ */
+
+    }
+
+    .titulo-oJogo {
+        margin-top:90px;
+    }
+
+    .containerControles {
+        position: center;
+        width: 80%;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 290%; /* Ocupa toda a largura disponível */
+        height: 1200px; /* Altura da área */
+        background-image: url('../IMG/fogo-fundo.jpg'); /* Definindo a imagem como fundo */
+        background-size: 1500px; /* Garante que a imagem preencha todo o container */
+        background-position: center; /* Centraliza a imagem */
+        opacity: 0.9; /* Diminui a opacidade */
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        /*     font-family: "VT323", monospace;
+ */
+
+    }
+
+    .tituloControles {
+        margin-top:0px;
+    }
+
+    .containerContato {
+        position: center;
+        width: 80%;
+        height: 800px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 290%; /* Ocupa toda a largura disponível */
+        height: 1200px; /* Altura da área */
+        background-image: url('../IMG/fogo-fundo.jpg'); /* Definindo a imagem como fundo */
+        background-size: 1500px; /* Garante que a imagem preencha todo o container */
+        background-position: center; /* Centraliza a imagem */
+        opacity: 0.9; /* Diminui a opacidade */
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        /*     font-family: "VT323", monospace;
+ */
+
+    }
+
+    .tituloContato {
+        margin-top:-490px;
+    }
+
+    .containerContato h2 {
+        font-size: 25px;
+    }
+
+    header {
+        background-color: rgb(51, 51, 51);
+    }
+
+    .cadaTecla {
+        width:220px;
+    }
+
+    .cadaTecla h1 {
+        font-size: 25px;
+    }
+
+    .imagensControles {
+       margin-right: 100px;
+    }
+    
+    .imgFases {
+        width:10%;
+        height: 10%;
+    }
+
+    .joe {
+        width: 10%;
+        height: 10%;
+    }
+
+    .imagens-oJogo {
+        border: 2px solid blue;
+        margin-top: 600px;
+        height: 300px;
+    }
+}
+
+
+.LinkEmail a {
+    font-size: 100px;
+}
+
+.LinkEmail b {
+    color: rgb(251,203,56);
+    text-decoration: underline;
+}
